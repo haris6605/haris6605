@@ -1,0 +1,114 @@
+body {
+    background: linear-gradient(to right, #008080 50%, gray 50%);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ensures that the body fills the full viewport height */
+    overflow: auto; /* Enables scrolling if the content exceeds the viewport height */
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 50% for each side */
+    grid-template-rows: auto auto; /* Two rows for the sections */
+    gap: 20px; /* Space between grid items */
+    width: 90%;
+    margin: 20px 0;
+}
+
+.assignments, .interests {
+    grid-column: 1; /* Both on the left side */
+    border: 2px solid #333; /* Show borders */
+    box-sizing: border-box; /* To ensure padding and border are included in width */
+    height: 200px; /* Just for illustration, adjust accordingly */
+    padding: 20px;
+}
+
+.background {
+    grid-column: 2; /* On the right side */
+    grid-row: 1 / 3; /* Spans two rows */
+    border: 2px solid #333;
+    box-sizing: border-box;
+    height: calc(100% - 40px); /* Adjusted for borders and gaps, adjust if needed */
+    padding: 20px;
+}
+
+.quote {
+    grid-column: 1 / 3; /* Spans across both columns */
+    margin-top: 20px;
+    padding: 10px;
+    font-style: italic;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 2px solid #333; /* Show border */
+    box-sizing: border-box;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+table tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;  /* Remove spacing between table cells */
+}
+
+table td {
+    padding: 5px;
+    border: 0;  /* Ensure no borders */
+}
+
+table tr:nth-child(odd) {
+    background-color: #f2f2f2;  /* Light gray for odd rows */
+}
+
+table tr:nth-child(even) {
+    background-color: #e6e6e6;  /* A slightly different gray for even rows for contrast */
+}
+
+table a {
+    text-decoration: none; /* Remove the underline from links */
+    color: #333; /* Set the link color to dark gray, but you can customize it */
+}
+
+table a:hover {
+    text-decoration: underline; /* Add underline on hover for better user experience */
+}
